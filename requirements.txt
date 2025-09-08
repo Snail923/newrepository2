@@ -12,9 +12,8 @@ gunicorn==21.2.0
 python-multipart==0.0.6
 python-dotenv==1.0.0
 
-# Pydantic (safe versions with prebuilt wheels)
+# Pydantic (prebuilt wheel for Python 3.11)
 pydantic==2.6.4
-pydantic-core==2.16.3
 
 # CORS
 fastapi-cors==0.0.6
