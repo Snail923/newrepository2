@@ -1,5 +1,5 @@
-# Make sure pip can pull prebuilt wheels
-pip>=24.0
+# Ensure prebuilt wheels are used
+pip>=25.1
 setuptools>=65.0
 wheel
 
@@ -12,9 +12,5 @@ gunicorn==21.2.0
 python-multipart==0.0.6
 python-dotenv==1.0.0
 
-# Core dependencies
-# Upgrade pydantic to a version that ships wheels
-pydantic==2.5.3
-
-# This package is NOT official — consider replacing with Flask-CORS or using middleware
-fastapi-cors==0.0.6
+# Pydantic (must have wheels to avoid Rust build)
+pydantic==2.6.1
