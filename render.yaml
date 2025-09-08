@@ -2,9 +2,9 @@ services:
   - type: web
     name: drone-control-api
     env: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
     startCommand: gunicorn -w 4 -k uvicorn.workers.UvicornWorker -b :$PORT main:app
     envVars:
       - key: PYTHON_VERSION
-        value: 3.11.7   # ✅ works with pydantic-core wheels
+        value: 3.11.9   # Prebuilt wheels available, avoids Rust build issues
     plan: free
